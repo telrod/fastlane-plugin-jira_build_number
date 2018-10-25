@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'Insert build number into related jira issues'
   spec.homepage      = "https://github.com/telrod/fastlane-plugin-jira_build_number
-  spec.license       = "Apache-2.0"
+  spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
