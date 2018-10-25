@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = 'tom.elrod@gmail.com'
 
   spec.summary       = 'Insert build number into related jira issues'
-  spec.homepage      = "https://github.com/telrod/fastlane-plugin-jira_build_number
+  spec.homepage      = "https://github.com/telrod/fastlane-plugin-jira_build_number"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
