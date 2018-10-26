@@ -30,14 +30,18 @@ jobs:
             - ./vendor
           key: v1-dependencies-{{ checksum "Gemfile" }}
 
-      # run tests!
       - run:
-          name: run tests
-          command: bundle exec rake
+          name: build
+          command: bundle exec rake build
+
+      # run tests!
+#      - run:
+#          name: run tests
+#          command: bundle exec rake
 
       # collect reports
-      - store_test_results:
-          path: ~/repo/test-results
-      - store_artifacts:
-          path: ~/repo/test-results
-          destination: test-results
+#      - store_test_results:
+#          path: ~/repo/test-results
+#      - store_artifacts:
+#          path: ~/repo/test-results
+#          destination: test-results
