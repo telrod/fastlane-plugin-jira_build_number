@@ -25,4 +25,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency('rest-client')
   spec.add_development_dependency('fastlane')
+  #spec.add_development_dependency('rspec')
+  # spec.add_development_dependency('rake')
 end
