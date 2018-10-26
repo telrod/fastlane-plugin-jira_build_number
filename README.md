@@ -1,6 +1,6 @@
 # jira\_build\_number plugin
 
-[![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-jira_build_number)
+[![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-jira_build_number) [![CircleCI](https://circleci.com/gh/telrod/fastlane-plugin-jira_build_number.svg?style=svg)](https://circleci.com/gh/telrod/fastlane-plugin-jira_build_number)
 
 ## Getting Started
 
