@@ -45,6 +45,7 @@ module Fastlane
           response = RestClient.post "https://#{jiraHostname}/rest/api/2/issue/#{jiraTicketId}/comment",
                                      "{\"body\": \"Build: #{buildVersion}.#{buildNumber}\"}",
                                      {content_type: "application/json", Authorization: "Basic #{jiraBasicToken}"}
+          UI.message "Jira response: #{response}"
         end
 
 
