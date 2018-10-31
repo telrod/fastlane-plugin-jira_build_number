@@ -28,8 +28,8 @@ module Fastlane
 
         UI.message "Jira ticket id: #{jiraTicketId}"
 
-        buildNumber = params[:build_number]
-        buildVersion = params[:version_name]
+        buildNumber = params[:build_number].strip
+        buildVersion = params[:version_name].strip
 
         UI.message "Build version: #{buildVersion}"
         UI.message "Build number: #{buildNumber}"
@@ -41,13 +41,19 @@ module Fastlane
 
         jiraBasicToken = Base64.encode64("#{jiraUsername}:#{jiraPassword}")
 
+        #UI.message "token: #{jiraBasicToken}"
+
+        payload = "{\"body\": \"Build: #{buildVersion}.#{buildNumber}\"}"
+
+        #UI.message "payload: #{payload}"
+
         if(!jiraTicketId.nil?)
           response = RestClient.post "https://#{jiraHostname}/rest/api/2/issue/#{jiraTicketId}/comment",
-                                     {body => "Build: #{buildVersion}.#{buildNumber}"},
-                                     {:Authorization => "Basic #{jiraBasicToken}"}
+                                     payload,
+                                     {content_type: "application/json", Authorization: "Basic #{jiraBasicToken}"}
         end
-        
-        UI.message "Jira post response: #{response}"
+
+        #UI.message "Jira post response: #{response.body}"
 
         # sh "shellcommand ./path"
 
